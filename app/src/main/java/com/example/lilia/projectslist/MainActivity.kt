@@ -18,22 +18,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Créer des faux projet
-        val projects: ArrayList<String> = ArrayList()
 
-        projects.add("Projet 1")
-        projects.add("Projet 2")
-        projects.add("Projet 3")
+
+        val projects = listOf(
+            Project("name1","descr1"),
+            Project("name2","descr2"),
+            Project("name3","descr3")
+        )
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = MyAdapter(projects)
     }
 }
 
-data class Project(val name: String)
+data class Project(val name:String, val descriptor: String)
 
-class MyAdapter(val projects: ArrayList<String>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(val projects: List<Project>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
-        p0.title.text = projects[p1]
+        //p0.title.text = projects[p1]
+        p0.bindValue(projects[p1])
     }
 
     override fun getItemCount(): Int {
@@ -49,13 +52,15 @@ class MyAdapter(val projects: ArrayList<String>) : RecyclerView.Adapter<MyAdapte
 
         // 1) Récupérer les vues
         //val thisProject: RecyclerView = v.findViewById(R.id.recyclerView)
-        val title: TextView = itemView.findViewById(R.id.list_item)
+        val title: TextView = itemView.findViewById(R.id.title)
+        val description: TextView = itemView.findViewById(R.id.description)
         // TextView1
         // TextView2
 
         // 2ème étape
-        fun bindValue(projet: Project) {
-            //textView1 = project.title
+        fun bindValue(project: Project) {
+            title.text = project.name
+            description.text = project.descriptor
         }
 
     }
