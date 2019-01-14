@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProjectsList</string>
+    <string name="name1">name1</string>
+    <string name="descr1">descr1</string>
+    <string name="name2">name2</string>
+    <string name="descr2">descr2</string>
+    <string name="name3">name3</string>
+    <string name="descr3">descr3</string>
 </resources>
