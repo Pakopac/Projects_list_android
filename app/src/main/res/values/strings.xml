@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">ProjectsList</string>
 
-    <string name="name1">name1</string>
-    <string name="descr1">descr1</string>
-    <string name="tagName1">tagName1</string>
+    <string name="name1">Projects list</string>
+    <string name="descr1">Une liste qui rassemble différents projets effectués au cours de l\'année.</string>
+    <string name="tagName1">Android</string>
 
-    <string name="name2">name2</string>
-    <string name="descr2">descr2</string>
-    <string name="tagName2">tagName2</string>
+    <string name="name2">Sasuke simulator</string>
+    <string name="descr2">Vous rêvez de devenir sasuke? C\'est maintenant possible grâce à cette super application</string>
+    <string name="tagName2">Golang</string>
 
-    <string name="name3">name3</string>
-    <string name="descr3">descr3</string>
-    <string name="tagName3">tagName3</string>
+    <string name="name3">Ornithorynque life</string>
+    <string name="descr3">Plongez vous dans la vie passionnante et incroyable d\'un ornithorynque. </string>
+    <string name="tagName3">Javascript</string>
 </resources>

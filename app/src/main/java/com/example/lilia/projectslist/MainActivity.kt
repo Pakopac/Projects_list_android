@@ -25,16 +25,16 @@ class MainActivity : AppCompatActivity() {
         val projects = listOf(
             Project(getString(R.string.name1),getString(R.string.descr1),
                 getString(R.string.tagName1), resources.getColor(R.color.redTag),
-                "http://i.imgur.com/DvpvklR.png"
+                "https://img.bfmtv.com/c/630/420/207ef/3b62a3af980faa60a10f041e3c4.png"
                 ),
 
             Project(getString(R.string.name2), getString(R.string.descr2),
-                getString(R.string.tagName2), resources.getColor(R.color.orangeTag),
-                "http://i.imgur.com/DvpvklR.png"),
+                getString(R.string.tagName2), resources.getColor(R.color.blueTag),
+                "http://images6.fanpop.com/image/photos/39400000/Sasuke-Uchiha-uchiha-sasuke-39421286-1024-585.png"),
 
-            Project(getString(R.string.name3),getString(R.string.name3),
-                getString(R.string.tagName3), resources.getColor(R.color.greenTag),
-                "http://i.imgur.com/DvpvklR.png")
+            Project(getString(R.string.name3),getString(R.string.descr3),
+                getString(R.string.tagName3), resources.getColor(R.color.yellowTag),
+                "https://trustmyscience.com/wp-content/uploads/2018/03/ornithorynque-nage.jpeg")
         )
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -71,7 +71,7 @@ class MyAdapter(val projects: List<Project>) : RecyclerView.Adapter<MyAdapter.My
             description.text = project.description
             tagName.text = project.tagName
             DrawableCompat.setTintList(colorTag.background, ColorStateList.valueOf(project.colorTag))
-            Picasso.get().load(project.image).into(image)
+            Picasso.get().load(project.image).resize(1024,520).into(image)
         }
 
     }
