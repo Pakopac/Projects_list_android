@@ -123,7 +123,6 @@ class careerAdapter(val skills:List<skill>,val degrees:List<degree>,val experien
 
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
         val viewType : Int = getItemViewType(p1)
-        Log.v("azerty", getItemViewType(p1).toString())
         if (viewType == TYPE_SKILL) {
             (p0 as SkillsViewHolder).bindValue(skills[p1])
         }
@@ -155,7 +154,6 @@ class careerAdapter(val skills:List<skill>,val degrees:List<degree>,val experien
     }
 
     override fun getItemViewType(position: Int): Int {
-        Log.v("count",position.toString())
         if(position < 5){
             return TYPE_SKILL
         }
